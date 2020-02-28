@@ -1,0 +1,2 @@
+<g-swiper list="{{banners}}"/>
+<g-recommend list="{{recommends}}"/>
