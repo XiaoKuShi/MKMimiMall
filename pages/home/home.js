@@ -20,7 +20,7 @@ Page({
     },
     currentType: titleTypes[0],
     showBackTop: false,
-    isTapFixed: false,
+    isTabFixed: false,
     tabScrollTop: 0
   },
 
@@ -114,9 +114,9 @@ Page({
 
     //更新tab-control位置
     const isFixed = scrollTop >= this.data.tabScrollTop;
-    if (isFixed !== this.data.isTapFixed) {
+    if (isFixed !== this.data.isTabFixed) {
       this.setData({
-        isTapFixed: isFixed
+        isTabFixed: isFixed
       })
     }
   }

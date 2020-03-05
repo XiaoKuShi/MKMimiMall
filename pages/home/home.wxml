@@ -1,5 +1,5 @@
 <!-- 1.轮播图 -->
-<g-swiper list="{{banners}}"/>
+<g-swiper list="{{banners}}" bind:imageload="handleImageLoad"/>
 
 <!-- 2.推荐 -->
 <g-recommend list="{{recommends}}" bind:imageload="handleImageLoad"/>
@@ -11,8 +11,8 @@
 <g-tab-control titles="{{titles}}"
                bind:tabclick="handleTapClick"
                id="tab-control"
-               class="{{isTabFixed ? 'tabFixed' : ''}}"/>
-<!-- <g-tab-control titles="{{titles}}" wx:if="{{isTapFixed}}"/> -->
+               class="{{isTabFixed ? 'tabFixed': ''}}"/>
+<g-tab-control titles="{{titles}}" wx:if="{{isTabFixed}}"/>
 
 <!-- 5.列表 -->
 <g-goods list="{{goods[currentType].list}}"/>
