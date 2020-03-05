@@ -1,2 +1,21 @@
+<!-- 1.轮播图 -->
 <g-swiper list="{{banners}}"/>
-<g-recommend list="{{recommends}}"/>
+
+<!-- 2.推荐 -->
+<g-recommend list="{{recommends}}" bind:imageload="handleImageLoad"/>
+
+<!-- 3.流行 -->
+<g-popular/>
+
+<!-- 4.tab-control -->
+<g-tab-control titles="{{titles}}"
+               bind:tabclick="handleTapClick"
+               id="tab-control"
+               class="{{isTabFixed ? 'tabFixed' : ''}}"/>
+<!-- <g-tab-control titles="{{titles}}" wx:if="{{isTapFixed}}"/> -->
+
+<!-- 5.列表 -->
+<g-goods list="{{goods[currentType].list}}"/>
+
+<!-- 6.回到顶部 -->
+<g-back-top wx:if="{{showBackTop}}"/>
