@@ -1,8 +1,12 @@
 <!-- 1.轮播图 -->
-<g-swiper list="{{banners}}" bind:imageload="handleImageLoad"/>
+<g-swiper images="{{bannerImages}}" 
+          bind:imageload="handleImageLoad" 
+          bind:imagetap="handleSwiperTap"/>
 
 <!-- 2.推荐 -->
-<g-recommend list="{{recommends}}" bind:imageload="handleImageLoad"/>
+<g-recommend list="{{recommends}}" 
+          bind:imageload="handleImageLoad"
+          bind:imagetap="handleRecommendTap"/>
 
 <!-- 3.流行 -->
 <g-popular/>

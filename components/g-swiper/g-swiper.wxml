@@ -7,9 +7,13 @@
         interval="3500"
         duration="350"
         >
-  <block wx:for="{{list}}" wx:key="index">
+  <block wx:for="{{images}}" wx:key="index">
     <swiper-item class="swiper-item">
-      <image src="{{item.image}}" mode="widthFix" bind:load="handleImageLoad"></image>
+      <image src="{{item}}" 
+             mode="widthFix" 
+             bind:load="handleImageLoad"
+             bind:tap="handleImageClick"
+             data-index="{{index}}"/>
     </swiper-item>
   </block>
 </swiper>

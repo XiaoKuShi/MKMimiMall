@@ -4,7 +4,9 @@
     "pages/category/category",
     "pages/cart/cart",
     "pages/profile/profile",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/common/web/web",
+    "pages/common/second/second"
   ],
   "window": {
     "navigationBarBackgroundColor": "#EA4413",

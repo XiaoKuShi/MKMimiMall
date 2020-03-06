@@ -11,6 +11,7 @@ const titleTypes = [POP, NEW, SELL]
 Page({
   data: {
     banners: {},
+    bannerImages: {},
     recommends: {},
     titles: ['流行', '新款', '精选'],
     goods: {
@@ -38,8 +39,14 @@ Page({
 
   _getMultiData() {
     r.getMultiData().then(res => {
+      const banners = res.data.data.banner.list
+      const images = banners.map(item => {
+        return item.image
+      })
+
       this.setData({
-        banners: res.data.data.banner.list,
+        banners: banners,
+        bannerImages: images,
         recommends: res.data.data.recommend.list
       })
     })
@@ -89,6 +96,28 @@ Page({
       currentType: titleTypes[event.detail.index]
     })
   },
+  handleSwiperTap(event) {
+    //点击banner跳转到对应的详情页
+    const index = event.detail.index
+    const item = this.data.banners[index]
+    this._navigateToSecond(item)
+  },
+  handleRecommendTap(event) {
+    //点击banner跳转到对应的详情页
+    const index = event.detail.index
+    const item = this.data.recommends[index]
+    this._navigateToSecond(item)
+  },
+  _navigateToSecond(item) {
+    const image = item.image
+    const title = item.title
+    const url = '/pages/common/second/second?url=' + image + '&title=' + title
+
+    wx.navigateTo({
+      url: url,
+    })
+  },
+
   handleImageLoad() {
     //监听到recommend图片加载完成，更新tab-control高度
     wx.createSelectorQuery().select("#tab-control").boundingClientRect(rect => {
