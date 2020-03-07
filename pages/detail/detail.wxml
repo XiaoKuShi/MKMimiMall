@@ -1,11 +1,10 @@
-<view class="content">
-  <view class="movie">
-    <image class="movie-icon" src="{{info.poster_b}}" mode="widthFix"/>
-    <view class="movie-info">
-      <view class="aliasname">片名: {{info.aliasname}}</view>
-      <view class="area">国家: {{info.area}}</view>
-      <view class="category">类别: {{info.category}}</view>
-      <view class="desc">介绍: {{info.content}}</view>
-    </view>
-  </view>
+<view class="detail">
+  <view class="title">热门文章</view>
+  <block wx:for="{{articles}}" wx:key="index">
+    <g-article-item info="{{item}}"/>
+  </block>
+  <view class="title">推荐</view>
+  <block wx:for="{{similars}}" wx:key="index">
+    <g-similar-item info="{{item}}"/>
+  </block>
 </view>

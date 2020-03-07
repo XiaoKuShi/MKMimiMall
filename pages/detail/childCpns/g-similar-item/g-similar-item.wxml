@@ -1,0 +1,8 @@
+<view class="similar">
+  <image src="{{info.poster}}" mode="widthFix"/>
+  <view class="similar-info">
+    <view class="cnname">{{info.cnname}}</view>
+    <view class="enname">{{info.enname}}</view>
+    <view class="area">({{info.area}}) {{info.category}}</view>
+  </view>
+</view>

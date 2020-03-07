@@ -1,0 +1,10 @@
+<view class="article">
+  <view class="article-icon">
+    <image src="{{info.poster}}"/>
+  </view>
+  <view class="article-info">
+    <view class="name">{{info.title}}</view>
+    <view class="time">{{info.dateline}}</view>
+    <view class="group">{{info.group_name}}</view>
+  </view>
+</view>

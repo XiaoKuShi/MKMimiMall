@@ -3,9 +3,7 @@ Page({
     url: ''
   },
 
-  onLoad: function (options) {
-    console.log(options)
-    
+  onLoad: function (options) {    
     wx.setNavigationBarTitle({
       title: options.title || ''
     })

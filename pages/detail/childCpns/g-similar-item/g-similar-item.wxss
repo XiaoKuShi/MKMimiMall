@@ -1,0 +1,24 @@
+.similar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+}
+
+.cnname {
+  font-size: 40rpx;
+  font-weight: 600;
+  margin-top: 10rpx;
+}
+
+.enname {
+  font-size: 30rpx;
+  color: #2a2a2c;
+}
+
+.area {
+  font-size: 30rpx;
+  color: #2a2a2c;
+}

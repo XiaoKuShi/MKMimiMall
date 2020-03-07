@@ -1,4 +1,7 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "g-article-item": "./childCpns/g-article-item/g-article-item",
+    "g-similar-item": "./childCpns/g-similar-item/g-similar-item"
+  },
   "navigationBarTitleText": "详情"
 }

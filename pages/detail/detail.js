@@ -2,18 +2,16 @@ import r from '../../services/request.js'
 
 Page({
   data: {
-    info: {},
+    articles: {},
     similars: []
   },
   onLoad: function (options) {
     r.getMovieInfo(options.iid).then(res => {
-      const info = res.data.data.resource_info
+      const articles = res.data.data.article_list
       const similars = res.data.data.similar_list
-      console.log(info)
-      console.log(similars)
       
       this.setData({
-        info: info,
+        articles: articles,
         similars: similars
       })
     })
