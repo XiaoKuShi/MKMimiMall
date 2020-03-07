@@ -5,5 +5,13 @@ Component({
       type: Object,
       value: {}
     }
+  },
+  methods: {
+    itemClick(e) {
+      const iid = this.properties.item.id
+      wx.navigateTo({
+        url: '/pages/detail/detail?iid=' + iid,
+      })
+    }
   }
 })

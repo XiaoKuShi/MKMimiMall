@@ -6,7 +6,8 @@
     "pages/profile/profile",
     "pages/index/index",
     "pages/common/web/web",
-    "pages/common/second/second"
+    "pages/common/second/second",
+    "pages/detail/detail"
   ],
   "window": {
     "navigationBarBackgroundColor": "#EA4413",

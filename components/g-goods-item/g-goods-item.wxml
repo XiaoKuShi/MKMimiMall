@@ -1,4 +1,4 @@
-<view class="goods-item">
+<view class="goods-item" bind:tap="itemClick">
   <image class="image" src="{{item.poster_b}}" mode="widthFix"></image>
   <view class="desc-info">
     <view class="title">{{item.title}}</view>

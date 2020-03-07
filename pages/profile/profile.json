@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "我的"
+  "usingComponents": {
+    "g-header": "./childCpns/g-header/g-header"
+  },
+  "navigationBarTitleText": "我的信息"
 }

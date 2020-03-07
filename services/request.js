@@ -36,5 +36,19 @@ export default {
         uid: '5704761'
       }
     })
+  },
+  getMovieInfo(id) {
+    //http://ios.zmzapi.com/index.php?accesskey=519f9cab85c8059d17544947k361a827&client=1&g=api/v3&m=index&a=resource&id=$id
+    return network({
+      url: "http://ios.zmzapi.com/index.php",
+      data: {
+        accesskey: '519f9cab85c8059d17544947k361a827',
+        client: '1',
+        g: 'api/v3',
+        m: 'index',
+        a: 'resource',
+        id: id
+      }
+    })
   }
 }
