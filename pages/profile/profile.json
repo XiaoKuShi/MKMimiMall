@@ -1,6 +1,8 @@
 {
   "usingComponents": {
-    "g-header": "./childCpns/g-header/g-header"
+    "g-header": "./childCpns/g-header/g-header",
+    "g-info": "./childCpns/g-info/g-info",
+    "g-list-view": "./childCpns/g-list-view/g-list-view"
   },
   "navigationBarTitleText": "我的信息"
 }

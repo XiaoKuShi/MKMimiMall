@@ -30,7 +30,7 @@
   margin-top: 10rpx;
 }
 
-.phone iamge {
+.phone image {
   width: 36rpx;
   height: 36rpx;
   vertical-align: middle;
