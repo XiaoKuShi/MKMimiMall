@@ -10,7 +10,7 @@
       暂无绑定手机号
     </view>
   </view>
-  <view class="arrow">
+  <view class="arrow" bind:tap="handleArrowClick">
     <image src="/assets/common/arrow-right.png"/>
   </view>
 </view>

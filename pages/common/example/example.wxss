@@ -1,0 +1,46 @@
+.content {
+  display: flex;
+  width: 700rpx;
+  height: 800rpx;
+  background: rgb(153, 153, 204);
+
+  /* flex-direction: row; */
+  /* justify-content: space-around; */
+  /* align-items: center; */
+  /* flex-wrap: wrap; */
+  /* flex-flow: row wrap; */
+  /* align-content: space-evenly; */
+}
+
+.item {
+  width: 200rpx;
+  height: 200rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 200rpx;
+  font-size: 40rpx;
+}
+
+.v1 {
+  background: #f00;
+  /* order: 2; */
+  /* flex-grow: 0.3; */
+  /* flex-shrink: 0.2; */
+}
+
+.v2 {
+  background: #0f0;
+  /* height: 400rpx;
+  font-size: 80rpx; */
+  /* order: 4; */
+  /* align-self: flex-end; */
+  /* flex-grow: 0.3; */
+  /* flex-shrink: 0.2; */
+}
+
+.v3 {
+  background: #00f;
+  /* order: 3; */
+  /* flex-grow: 0.3; */
+  /* flex-shrink: 0.2; */
+}

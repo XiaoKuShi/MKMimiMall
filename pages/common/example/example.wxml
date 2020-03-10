@@ -1,0 +1,146 @@
+<view class="content">
+  <view class="item v1">item1</view>
+  <view class="item v2">item2</view>
+  <view class="item v3">item3</view>
+</view>
+
+<!-- 作用于flex-container -->
+<view>
+  作用于flex-container
+  <!-- 1.开启flex布局 -->
+  <!-- 
+  在父控件添加 display: flex
+  此时父控件称作 flex-contanier
+  其子空间称作 flex-items
+  -->
+
+  <!-- 2.flex-direction，决定主轴方向 -->
+  <!-- 
+  row(默认值)，主轴方向水平向右
+  row-reverse，主轴方向水平向左
+  column，主轴方向竖直向下
+  column-reverse，主轴方向竖直向上
+  -->
+
+  <!-- 3.justify-content，决定主轴方向上对齐方式 -->
+  <!-- 
+  flex-start: 与main start对齐
+  flex-end: 与main end对齐
+  center: 居中
+  spacing-between: 
+    - flex-items 之间距离相等
+    - 两端与main start、main end对齐
+  spacing-evenly:
+    - flex-items 之间距离相等
+    - 两端与main start、main end距离等于items之间距离
+  spacing-around:
+    - flex-items 之间距离相等
+    - 两端与main start、main end距离等于items之间距离的一半
+  -->
+
+  <!-- 4.align-items 决定了 flex-items 在cross axis上的对齐方式  -->
+  <!-- 
+  normal: 在弹性布局中，效果和stretch一样
+  stretch: 当flex-item在cross axis方向上的高度为auto时，会制动拉伸填充flex-contanier
+  flex-start: 与cross start对齐
+  flex-end: 与cross end对齐
+  center: 居中对齐
+  baseline: 与基线对齐(基线是第一行文本的下划线)
+  -->
+
+  <!-- 5.flex-wrap 决定了flex-contanier是单行还是多行 -->
+  <!-- 
+  nowrap: 单行(默认)，若显示不全，会自动压缩
+  wrap: 多行，会根据行数将 cross axis 平分
+  wrap-reverse: 多行(对比wrap, cross start 和 cross end 相反)
+  -->
+
+  <!-- 6.flex-flow 是 flex-direction || flex-wrap 的缩写 -->
+  <!-- 
+  row wrap
+  可以省略，顺序任意
+  -->
+
+  <!-- 7.algin-content 决定了cross axis 方向上的对齐方式 -->
+  <!--  
+  flex-start: 与main start对齐
+  flex-end: 与main end对齐
+  center: 居中
+  spacing-between: 
+    - flex-items 之间距离相等
+    - 两端与main start、main end对齐
+  spacing-evenly:
+    - flex-items 之间距离相等
+    - 两端与main start、main end距离等于items之间距离
+  spacing-around:
+    - flex-items 之间距离相等
+    - 两端与main start、main end距离等于items之间距离的一半
+  -->
+</view>
+
+<!-- 作用于flex-items -->
+<view>
+  作用于flex-items
+  <!-- 1.order 决定了flex-item的顺序 -->
+  <!-- 
+  默认值 0
+  可以设置为任意整数（正整数，负整数，0），排列顺序由小到大
+  -->
+
+  <!-- 2.align-self 覆盖flex-container设置的align-items -->
+  <!--  
+  auto: 遵从flex-container设置的align-items
+  stretch、flex-start、flex-end、center、baseline，效果与align-items一致
+  -->
+
+  <!-- 3.flex-grow 决定了flex-item的放大比例 -->
+  <!--  
+  特点：
+    - 可以设置为任意非负数字(正小数、正整数、0)，默认为0
+    - 当flex-container在main axis上有剩余size时才生效
+  当flex-item的flex-grow总和sum超过1，每个item扩展的size：
+    - 剩余size * flex-grow/sum
+  当flex-item的flex-grow总和sum小于1，每个item扩展的size：
+    - 剩余size * flex-grow
+  -->
+
+    <!-- 4.flex-shrink 决定了flex-item的缩小比例 -->
+  <!--  
+  特点：
+    - 可以设置为任意非负数字(正小数、正整数、0)，默认为0
+    - 当flex-item在main axis方向上超过flex-container时才生效
+  当flex-item的flex-shrink总和sum超过1，每个item收缩的size：
+    - 超出size * flex-shrink/sum
+  当flex-item的flex-shrink总和sum小于1，每个item收缩的size：
+    - 超出size * flex-grow
+  -->
+
+  <!-- 5.flex-basis 设置flex-items在主轴上面的base size -->
+  <!--  
+    - auto (默认值)，无影响
+    - 具体数值(如200)
+  
+  决定flex-items最终base size的因素，优先级由高到低
+  - max-width/max-height/min-width/min-height
+  - flex-basis
+  - width/height
+  - 内容本身的size
+  -->
+
+  <!-- 6.flex 是 flex-grow || flex-shrink || flex-basis的简写 -->
+  <!-- 
+  单值语法：
+    - 一个无单位数(<number>): 被当做<flex-grow>的值
+    - 一个有效的宽度(width)值: 被当做<flex-basis>的值
+    - 关键字 none , auto, initial
+
+  双值语法：
+    - 第一个值必须是无单位数，表示<flex-grow>
+    - 第二个值只有两个选择：
+      - 一个无单位数，表示<flex-shrink>
+      - 一个有效的宽度值，表示<flex-basis>
+  
+  三值语法：
+    - 无单位数 + 无单位数 + 有效的宽度值
+  -->
+</view>

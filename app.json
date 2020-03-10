@@ -7,6 +7,7 @@
     "pages/index/index",
     "pages/common/web/web",
     "pages/common/second/second",
+    "pages/common/example/example",
     "pages/detail/detail"
   ],
   "window": {
