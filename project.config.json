@@ -58,8 +58,9 @@
 			"list": [
 				{
 					"id": -1,
-					"name": "pages/common/example/example",
-					"pathName": "pages/common/example/example",
+					"name": "pages/cart/cart",
+					"pathName": "pages/cart/cart",
+					"query": "",
 					"scene": null
 				}
 			]

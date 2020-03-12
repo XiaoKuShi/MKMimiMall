@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "g-check-icon": "/components/g-check-icon/g-check-icon"
+  }
+}

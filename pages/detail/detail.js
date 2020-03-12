@@ -1,5 +1,10 @@
 import r from '../../services/request.js'
 
+import {
+  GoodsBaseInfo,
+  ShopInfo,
+} from '../../services/model.js'
+
 Page({
   data: {
     articles: {},
